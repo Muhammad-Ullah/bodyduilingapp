@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "187021949685",
+    "project_id": "gymapp-f365e",
+    "storage_bucket": "gymapp-f365e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:187021949685:android:c564f5f1b5cee5441223bc",
+        "android_client_info": {
+          "package_name": "com.example.gymbodybuilding"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "187021949685-5jc3vj660o4hudormukuu6655eq9blhi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gymbodybuilding",
+            "certificate_hash": "7e6a7a83bfc06d2bfb71cc0f8110bd8d1160a137"
+          }
+        },
+        {
+          "client_id": "187021949685-shuldg7pkqlc21lemchqadba8vnsfpk3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDX4J39ic6dtggNjeiGyOCU2hnCUyfMlbw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "187021949685-shuldg7pkqlc21lemchqadba8vnsfpk3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
