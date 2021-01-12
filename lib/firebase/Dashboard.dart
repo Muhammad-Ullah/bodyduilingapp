@@ -44,7 +44,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   }
 
   updateData(String name, String gender, int score, String userID) async {
-    await DatabaseManager().updateUserList(name, gender, score, userID);
+    await DatabaseManager().createUserData(name, gender, score, userID);
     fetchDatabaseList();
   }
 

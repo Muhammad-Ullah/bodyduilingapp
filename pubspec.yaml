@@ -34,10 +34,11 @@ dependencies:
   fluttertoast: ^7.1.1
   flutter_spinkit: "^4.1.2"
   provider: ^4.3.2+2
-  image_picker: ^0.6.0+17
   firebase_storage: ^4.0.1
   google_sign_in: ^4.4.4
   shared_preferences: ^0.5.12+4
+  font_awesome_flutter: ^8.2.0
+  image_picker: ^0.5.3+1
 
 
 dev_dependencies:

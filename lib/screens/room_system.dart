@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gymbodybuilding/models/constants.dart';
 import 'package:gymbodybuilding/screens/create_room.dart';
-
 import 'already_created_room.dart';
 
 
@@ -15,10 +14,12 @@ class _RoomSystemState extends State<RoomSystem> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
         appBar: AppBar(
           title: Text("Room system"),
           backgroundColor: Color(mainColor),
+        ),
+        drawer: Drawer(
+            child: MainDrawer(),
         ),
         body:SafeArea(
           child: SingleChildScrollView(
@@ -178,9 +179,89 @@ class _RoomSystemState extends State<RoomSystem> {
               ],
             ),
           ),
+
         )
-
-
     );
+  }
+}
+class MainDrawer extends StatelessWidget {
+  const MainDrawer({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(children: [
+      Container(
+        child: Padding(
+          padding: EdgeInsets.only(top: 50.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+
+              SizedBox(
+                height: 5.0,
+              ),
+              Text(
+                "Lee Wang",
+                style: TextStyle(
+                  fontSize: 22.0,
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
+              SizedBox(
+                height: 5.0,
+              ),
+              Text(
+                "Software Engenieer",
+                style: TextStyle(
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+      SizedBox(
+        height: 20.0,
+      ),
+      //Now let's Add the button for the Menu
+      //and let's copy that and modify it
+      ListTile(
+        onTap: () {},
+        leading: Icon(
+          Icons.person,
+          color: Colors.black,
+        ),
+        title: Text("Your Profile"),
+      ),
+
+      ListTile(
+        onTap: () {},
+        leading: Icon(
+          Icons.inbox,
+          color: Colors.black,
+        ),
+        title: Text("Your Inbox"),
+      ),
+
+      ListTile(
+        onTap: () {},
+        leading: Icon(
+          Icons.assessment,
+          color: Colors.black,
+        ),
+        title: Text("Your Dashboard"),
+      ),
+
+      ListTile(
+        onTap: () {},
+        leading: Icon(
+          Icons.settings,
+          color: Colors.black,
+        ),
+        title: Text("Settings"),
+      ),
+    ]);
   }
 }

@@ -52,7 +52,7 @@ class _AlreadyCreatedRoomsState extends State<AlreadyCreatedRooms> {
           elevation: 0,
           backgroundColor: Color(mainColor)),
       body: StreamBuilder(
-        stream: FirebaseFirestore.instance.collection("profileInfo").snapshots(),
+        stream: FirebaseFirestore.instance.collection("room").snapshots(),
         builder: (context,snapshot)
         {
             if(snapshot.data==null)

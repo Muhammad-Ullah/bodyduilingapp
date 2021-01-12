@@ -6,9 +6,9 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:gymbodybuilding/authentication/signup.dart';
-import 'package:gymbodybuilding/firebase/NamePhone.dart';
 import 'package:gymbodybuilding/firebase/auth.dart';
 import 'package:gymbodybuilding/models/constants.dart';
+import 'package:gymbodybuilding/screens/profile.dart';
 import 'package:gymbodybuilding/screens/room_system.dart';
 
 
@@ -200,7 +200,7 @@ class _LoginState extends State<Login> {
                   onPressed: ()
                   {
                       googleSignIn();
-                      Navigator.push((context), MaterialPageRoute(builder: (context) => NamePhone()));
+                      Navigator.push((context), MaterialPageRoute(builder: (context) => Profile()));
                   },
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10)
