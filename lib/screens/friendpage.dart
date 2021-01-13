@@ -88,6 +88,7 @@ class _FriendsPageState extends State<FriendsPage> {
       body:Container(
          child: Column(
            children: <Widget>[
+
              Padding(
                padding: const EdgeInsets.all(8.0),
                child: TextField(
@@ -97,7 +98,7 @@ class _FriendsPageState extends State<FriendsPage> {
                  controller: editingController,
                  decoration: InputDecoration(
                      labelText: "Search",
-                     hintText: "Srch",
+                     hintText: "Search your frinds at gym",
                      prefixIcon: Icon(Icons.search,color: Color(primareyColor),),
                      border: OutlineInputBorder(
                          borderRadius: BorderRadius.all(Radius.circular(25.0)))),
