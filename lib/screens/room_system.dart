@@ -60,7 +60,7 @@ class _RoomSystemState extends State<RoomSystem> {
                         onTap: ()
                         {
                           Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => AlreadyCreatedRooms()));
+                          MaterialPageRoute(builder: (context) => CreateRoom ()));
                         },
                       ),
                       InkWell(
@@ -104,7 +104,7 @@ class _RoomSystemState extends State<RoomSystem> {
                         onTap: ()
                         {
                           Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => AlreadyCreatedRooms()));
+                              MaterialPageRoute(builder: (context) => CreateRoom ()));
                         },
                       ),
                       InkWell(
@@ -126,7 +126,7 @@ class _RoomSystemState extends State<RoomSystem> {
                         onTap: ()
                         {
                           Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => AlreadyCreatedRooms()));
+                              MaterialPageRoute(builder: (context) => CreateRoom ()));
                         },
                       ),
                       InkWell(
@@ -148,7 +148,7 @@ class _RoomSystemState extends State<RoomSystem> {
                         onTap: ()
                         {
                           Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => AlreadyCreatedRooms()));
+                              MaterialPageRoute(builder: (context) => CreateRoom ()));
                         },
                       ),
                       InkWell(
@@ -170,7 +170,7 @@ class _RoomSystemState extends State<RoomSystem> {
                         onTap: ()
                         {
                           Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => AlreadyCreatedRooms()));
+                              MaterialPageRoute(builder: (context) => CreateRoom ()));
                         },
                       ),
                     ],

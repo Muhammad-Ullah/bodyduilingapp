@@ -3,12 +3,14 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:gymbodybuilding/firebase/AuthenticationService.dart';
 import 'package:gymbodybuilding/firebase/DatabaseManager.dart';
 import 'package:gymbodybuilding/firebase/auth.dart';
 import 'package:gymbodybuilding/models/constants.dart';
 import 'package:gymbodybuilding/screens/chat_screen.dart';
 
+import '../loading.dart';
 import 'login.dart';
 
 
@@ -31,6 +33,7 @@ class _SignUpState extends State<SignUp> {
   bool loading=false;
   String error="";
   List gender=["Male","Female","Other"];
+  var _isLoadingSignUp=false;
 
   String select;
   List userProfilesList = [];
@@ -66,7 +69,7 @@ class _SignUpState extends State<SignUp> {
   }
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return _isLoadingSignUp?Loading("sign up"): Scaffold(
       backgroundColor: Color(mainColor),
       appBar: AppBar(title: Text('Sign Up'),
         backgroundColor: Color(mainColor),),
@@ -78,7 +81,7 @@ class _SignUpState extends State<SignUp> {
           child: ListView(
             children: [
               SizedBox(
-                height: 70,
+                height: 10,
               ),
                Container(
                     margin: EdgeInsets.only(top: 10),
@@ -145,6 +148,7 @@ class _SignUpState extends State<SignUp> {
                           borderRadius: BorderRadius.all(Radius.circular(10.0)),
                           borderSide: BorderSide(
                               color: Colors.white,
+
                               width: 2),
                         ),
                       ),
@@ -229,7 +233,7 @@ class _SignUpState extends State<SignUp> {
                   child: Center(
                     child: TextFormField(
                       controller: _phoneController,
-                      validator: (val)=>ph_no.length<12 ? "Phone number is missing":null,
+                     // validator: (val)=>ph_no.length<12 ? "Phone number is missing":null,
                       onChanged: (val)
                       {
                         setState(() {
@@ -375,10 +379,19 @@ class _SignUpState extends State<SignUp> {
                   ),
                   color: Color(primareyColor),
                   onPressed: ()
-                    async {
+                  async {
+                    setState(() {
+                      _isLoadingSignUp=true;
+                    });
                       if (_formkey.currentState.validate()) {
                        createUser();
                        submitAction(context);
+                       setState(() {
+                         _isLoadingSignUp=false;
+                       });
+
+                       showToast("Sign Up successfully");
+
                       }
                   },
                   shape: RoundedRectangleBorder(
@@ -487,5 +500,16 @@ class _SignUpState extends State<SignUp> {
     createData(_nameController.text, _phoneController.text, userID);
     _nameController.clear();
     _phoneController.clear();
+  }
+  void showToast(String msg) {
+    Fluttertoast.showToast(
+        msg: msg,
+        toastLength: Toast.LENGTH_LONG,
+        gravity: ToastGravity.CENTER,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.black,
+        textColor: Colors.red,
+        fontSize: 16.0
+    );
   }
 }
