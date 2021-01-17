@@ -89,7 +89,7 @@ class _SignUpState extends State<SignUp> {
                     child: Center(
                         child: TextFormField(
                           controller: _nameController,
-                          validator: (val)=>val.isEmpty? "This field cannot be empty":null,
+                         // validator: (val)=>val.isEmpty? "This field cannot be empty":null,
                           onChanged: (val)
                           {
                             setState(() {
@@ -124,7 +124,7 @@ class _SignUpState extends State<SignUp> {
                   height: 50,
                   child: Center(
                     child: TextFormField(
-                      validator: (val)=>val.isEmpty? "Enter an email":null,
+                      //validator: (val)=>val.isEmpty? "Enter an email":null,
                       onChanged: (val)
                       {
                         setState(() {
@@ -159,7 +159,7 @@ class _SignUpState extends State<SignUp> {
                   height: 50,
                   child: Center(
                     child: TextFormField(
-                      validator: (val)=>val.length<6? "Enter password 6 characters":null,
+                     // validator: (val)=>val.length<6? "Enter password 6 characters":null,
                       obscureText: true,
                       onChanged: (val)
                       {
@@ -195,7 +195,7 @@ class _SignUpState extends State<SignUp> {
                   height: 50,
                   child: Center(
                     child: TextFormField(
-                      validator: (val)=>password!=val? "Password did not match":null,
+                      //validator: (val)=>password!=val? "Password did not match":null,
                       onChanged: (val)
                       {
                         setState(() {

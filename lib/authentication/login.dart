@@ -9,7 +9,12 @@ import 'package:gymbodybuilding/authentication/signup.dart';
 import 'package:gymbodybuilding/firebase/NamePhone.dart';
 import 'package:gymbodybuilding/firebase/auth.dart';
 import 'package:gymbodybuilding/models/constants.dart';
+//import 'package:gymbodybuilding/screens/buttom_navigation/main_bottom_navigation.dart';
 import 'package:gymbodybuilding/screens/room_system.dart';
+import 'package:gymbodybuilding/screens/splashscreen.dart';
+
+import '../screens/forgot_password.dart';
+import 'signup.dart';
 
 
 class Login extends StatefulWidget {
@@ -54,6 +59,7 @@ class _LoginState extends State<Login> {
                   height: 50,
                   child: Center(
                     child: TextFormField(
+
                       //validator: (val) => val.isEmpty ? "Enter an email" : null,
                       onChanged: (val) {
                         setState(() {
@@ -62,23 +68,19 @@ class _LoginState extends State<Login> {
                       },
                       autocorrect: true,
                       decoration: InputDecoration(
-                        hintText: 'email id',
-                        prefixIcon: Icon(Icons.person_outline,color: Color(primareyColor),),
-                        hintStyle: TextStyle(color: Colors.grey),
+                        contentPadding: EdgeInsets.symmetric(vertical: 2, horizontal: 8),
                         filled: true,
-                        fillColor: Color(whitness),
-                        enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                          borderSide: BorderSide(
-                              color: Colors.white,
-                              width: 0),
+                        fillColor: Colors.white,
+
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.orange, width: 1.0),
+                          borderRadius: BorderRadius.circular(4),
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                          borderSide: BorderSide(
-                              color: Colors.white,
-                              width: 0),
+                          borderSide: BorderSide(color: Colors.orange, width: 2.0),
+                          borderRadius: BorderRadius.circular(4),
                         ),
+                        hintText: "Email",
                       ),
                     ),
                   )
@@ -88,10 +90,11 @@ class _LoginState extends State<Login> {
                   height:50,
                   child: Center(
                     child: TextFormField(
-                      validator: (val) =>
-                      val.length < 6
-                          ? "Your Password is greater than 6 characters"
-                          : null,
+
+                      // validator: (val) =>
+                      // val.length < 6
+                      //     ? "Your Password is greater than 6 characters"
+                      //     : null,
                       obscureText: true,
                       onChanged: (val) {
                         setState(() {
@@ -100,23 +103,19 @@ class _LoginState extends State<Login> {
                       },
                       autocorrect: true,
                       decoration: InputDecoration(
-                        hintText: 'Password',
-                        prefixIcon: Icon(Icons.lock,color: Color(primareyColor),),
-                        hintStyle: TextStyle(color: Colors.grey,),
+                        contentPadding: EdgeInsets.symmetric(vertical: 2, horizontal: 8),
                         filled: true,
-                        fillColor: Color(whitness),
-                        enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                          borderSide: BorderSide(
-                              color: Colors.white,
-                              width: 0),
+                        fillColor: Colors.white,
+
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.orange, width: 1.0),
+                          borderRadius: BorderRadius.circular(4),
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                          borderSide: BorderSide(
-                              color: Colors.white,
-                              width: 0),
+                          borderSide: BorderSide(color: Colors.orange, width: 2.0),
+                          borderRadius: BorderRadius.circular(4),
                         ),
+                        hintText: "Password",
                       ),
                     ),
                   )
@@ -153,12 +152,30 @@ class _LoginState extends State<Login> {
                 ),
               ),
               SizedBox(
+                height: 10,
+              ),
+              InkWell(
+                onTap: ()
+                {
+                  Navigator.push((context), MaterialPageRoute(builder: (context) => ForgotPassword()));
+                }
+                ,
+                child: Align(
+                 alignment: Alignment.topRight,
+                    child: Container(
+                      child: Text("Forgot password?"
+                      ),
+                    ),
+
+                ),
+              ),
+              SizedBox(
                 height: 50,
               ),
               Container(
                 margin: EdgeInsets.only(top: 1),
                 child: Center(
-                  child: Text('-OR-',style: TextStyle(fontSize: 20,color: Color(primareyColor)),),
+                  child: Text('-OR-',style: TextStyle(fontSize: 15,color: Color(primareyColor)),),
                 ),
               ),
               SizedBox(
@@ -170,28 +187,30 @@ class _LoginState extends State<Login> {
                 child: RaisedButton(
                   child: Text("Sign In with apple"),
                   onPressed: ()
-                    {},
+                    {
+                      //Navigator.push((context), MaterialPageRoute(builder: (context) => SplashScreen()));
+                    },
 
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)
                   ),
                 ),
               ),
-              Container(
-                margin: EdgeInsets.only(top: 10),
-                height: 45,
-                child:RaisedButton
-                  (
-                  child: Text("Sign In with facebook"),
-                  onPressed: (){
-
-                },
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)
-                  ),
-
-                ),
-              ),
+              // Container(
+              //   margin: EdgeInsets.only(top: 10),
+              //   height: 45,
+              //   child:RaisedButton
+              //     (
+              //     child: Text("Sign In with facebook"),
+              //     onPressed: (){
+              //
+              //   },
+              //     shape: RoundedRectangleBorder(
+              //         borderRadius: BorderRadius.circular(10)
+              //     ),
+              //
+              //   ),
+              // ),
               Container(
                 height: 45,
                 margin: EdgeInsets.only(top: 10),
@@ -209,11 +228,41 @@ class _LoginState extends State<Login> {
 
                 ),
               ),
+              SizedBox(
+                height: 5,
+              ),
+              Center(
+                child: Container(
+                  child: goToSignUp(),
+                ),
+              )
 
 
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget goToSignUp() {
+    TextStyle defaultStyle = TextStyle(color: Colors.grey, fontSize: 15.0);
+    TextStyle linkStyle = TextStyle(color: Color(primareyColor),fontSize: 20);
+    return RichText(
+      text: TextSpan(
+        style: defaultStyle,
+        children: <TextSpan>[
+          TextSpan(text: "Don't have an account?",style: TextStyle(color: Colors.white)),
+          TextSpan(
+              text:" Sign Up?",
+              style: linkStyle,
+              recognizer: TapGestureRecognizer()..onTap = ()
+              {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => SignUp()));
+              }
+          ),
+        ],
       ),
     );
   }
