@@ -54,7 +54,7 @@ class _LoginState extends State<Login> {
                   height: 50,
                   child: Center(
                     child: TextFormField(
-                      validator: (val) => val.isEmpty ? "Enter an email" : null,
+                      //validator: (val) => val.isEmpty ? "Enter an email" : null,
                       onChanged: (val) {
                         setState(() {
                           email = val;
