@@ -1,7 +1,9 @@
 
 
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:gymbodybuilding/firebase/DatabaseManager.dart';
 import 'package:gymbodybuilding/models/constants.dart';
 import 'package:gymbodybuilding/screens/already_created_room.dart';
@@ -177,12 +179,21 @@ class _CreateRoomState extends State<CreateRoom> {
                 color: Color(primareyColor),
                 onPressed:() {
                   submitAction(context);
-                  Navigator.push((context), MaterialPageRoute(builder: (context)=>FriendsPage()));
+                  
+                  showToast("Room created");
+                  
+                  Navigator.push((context), MaterialPageRoute(builder: (context)=>AlreadyCreatedRooms()));
                 },
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
+            ),
+            Container(
+                margin: EdgeInsets.only(left: 20,right: 20,top: 10),
+                child: Center(
+                  child: goToSignUp(),
+                )
             ),
             SizedBox(
               height: 50,
@@ -202,4 +213,37 @@ class _CreateRoomState extends State<CreateRoom> {
     _genderController.clear();
     _scoreController.clear();
   }
+  void showToast(String msg) {
+    Fluttertoast.showToast(
+        msg: msg,
+        toastLength: Toast.LENGTH_LONG,
+        gravity: ToastGravity.CENTER,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.black,
+        textColor: Colors.red,
+        fontSize: 16.0
+    );
+  }
+  Widget goToSignUp() {
+    TextStyle defaultStyle = TextStyle(color: Colors.grey, fontSize: 15.0);
+    TextStyle linkStyle = TextStyle(color: Color(primareyColor),fontSize: 20);
+    return RichText(
+      text: TextSpan(
+        style: defaultStyle,
+        children: <TextSpan>[
+          TextSpan(text: "or join already created rooms?",style: TextStyle(color: Colors.white)),
+          TextSpan(
+              text:" Join?",
+              style: linkStyle,
+              recognizer: TapGestureRecognizer()..onTap = ()
+              {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => AlreadyCreatedRooms()));
+              }
+          ),
+        ],
+      ),
+    );
+  }
+
 }

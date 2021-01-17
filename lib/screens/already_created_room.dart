@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:gymbodybuilding/firebase/DatabaseManager.dart';
 import 'package:gymbodybuilding/models/constants.dart';
+import 'package:gymbodybuilding/screens/friendpage.dart';
 
 
 class AlreadyCreatedRooms extends StatefulWidget {
@@ -15,6 +16,7 @@ class _AlreadyCreatedRoomsState extends State<AlreadyCreatedRooms> {
   List userProfilesList = [];
 
   String userID = "";
+  String partici="particapants:";
 
   @override
   void initState() {
@@ -52,7 +54,7 @@ class _AlreadyCreatedRoomsState extends State<AlreadyCreatedRooms> {
           elevation: 0,
           backgroundColor: Color(mainColor)),
       body: StreamBuilder(
-        stream: FirebaseFirestore.instance.collection("profileInfo").snapshots(),
+        stream: FirebaseFirestore.instance.collection("room").snapshots(),
         builder: (context,snapshot)
         {
             if(snapshot.data==null)
@@ -72,6 +74,10 @@ class _AlreadyCreatedRoomsState extends State<AlreadyCreatedRooms> {
                      ),
                      title: Text(course['roomname']),
                      subtitle: Text(course['Participants']),
+                     onTap: ()
+                     {
+                       Navigator.push((context), MaterialPageRoute(builder: (context)=>FriendsPage()));
+                     },
                    );
                  });
 
