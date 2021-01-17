@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gymbodybuilding/models/constants.dart';
 import 'package:gymbodybuilding/screens/create_room.dart';
+import 'package:gymbodybuilding/screens/your_profle.dart';
 import 'already_created_room.dart';
 
 
@@ -212,7 +213,7 @@ class MainDrawer extends StatelessWidget {
                 height: 5.0,
               ),
               Text(
-                "Software Engenieer",
+                "Software Engineer",
                 style: TextStyle(
                   fontSize: 16.0,
                   fontWeight: FontWeight.w400,
@@ -228,7 +229,10 @@ class MainDrawer extends StatelessWidget {
       //Now let's Add the button for the Menu
       //and let's copy that and modify it
       ListTile(
-        onTap: () {},
+        onTap: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => ProfilePage()));
+        },
         leading: Icon(
           Icons.person,
           color: Colors.black,

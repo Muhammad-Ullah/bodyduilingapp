@@ -6,7 +6,7 @@ import 'package:gymbodybuilding/firebase/auth.dart';
 import 'package:gymbodybuilding/screens/already_created_room.dart';
 import 'package:gymbodybuilding/screens/room_system.dart';
 import 'package:gymbodybuilding/screens/splashscreen.dart';
-import 'package:gymbodybuilding/screens/user_profile.dart';
+
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
           User user = snapshot.data;
           if(user==null)
             return Login();
-          return ProfilePage();
+          return RoomSystem();
         }
         else
           {

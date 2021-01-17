@@ -189,7 +189,6 @@ class _LoginState extends State<Login> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)
                   ),
-
                 ),
               ),
               Container(
@@ -197,9 +196,11 @@ class _LoginState extends State<Login> {
                 margin: EdgeInsets.only(top: 10),
                 child: RaisedButton(
                   child:Text("Sign in with google"),
-                  onPressed: ()
+                  onPressed: ()async
                   {
                       googleSignIn();
+                      User user = await auth.currentUser;
+                      showAlertDialog2(context, user.email);
                       Navigator.push((context), MaterialPageRoute(builder: (context) => Profile()));
                   },
                   shape: RoundedRectangleBorder(
@@ -231,8 +232,6 @@ class _LoginState extends State<Login> {
           accessToken: googleSignInAuthentication.accessToken);
       UserCredential  result = await auth.signInWithCredential(credential);
 
-      User user = await auth.currentUser;
-      showAlertDialog2(context, user.email);
 
       return Future.value(true);
     }
