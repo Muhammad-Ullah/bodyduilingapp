@@ -29,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       body: Container(
 
         child: Stack(
@@ -46,7 +46,7 @@ class _SplashScreenState extends State<SplashScreen> {
                       children: <Widget>[
                         Container(
                           child: new Image.asset(
-                            'assets/logo2.jpeg',
+                            'assets/pareaa.jpg',
                             scale: 5,
                           ),
                           // Icon(
@@ -68,7 +68,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     children: <Widget>[
                       CircularProgressIndicator(
 
-                        backgroundColor: Colors.black,
+                        backgroundColor: Colors.white,
                         valueColor: new AlwaysStoppedAnimation<Color>(Color(mainColor)),
 
                         // valueColor:,
