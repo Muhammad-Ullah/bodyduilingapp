@@ -7,6 +7,7 @@ import 'package:gymbodybuilding/screens/already_created_room.dart';
 import 'package:gymbodybuilding/screens/room_system.dart';
 import 'package:gymbodybuilding/screens/splashscreen.dart';
 import 'package:gymbodybuilding/screens/user_profile.dart';
+import 'package:gymbodybuilding/ui/screens/home.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,8 +32,8 @@ class MyApp extends StatelessWidget {
         if(snapshot.connectionState==ConnectionState.active) {
           User user = snapshot.data;
           if(user==null)
-            return Login();
-          return ProfilePage();
+            return SplashScreen();
+          return HomeScreen();
         }
         else
           {
