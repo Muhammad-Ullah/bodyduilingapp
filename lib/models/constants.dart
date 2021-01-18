@@ -3,7 +3,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-var primareyColor=0xFF0c0704;
+var primareyColor=0xFF039BE5;
 var lightPrimaryColor=0xFF994605;
 
 var mainColor=0xFFff7300;

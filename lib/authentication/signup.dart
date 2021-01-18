@@ -98,23 +98,19 @@ class _SignUpState extends State<SignUp> {
                           },
                           autocorrect: true,
                           decoration: InputDecoration(
-                            hintText: 'Username',
-                            prefixIcon: Icon(Icons.person_outline,color: Color(primareyColor),),
-                            hintStyle: TextStyle(color: Colors.grey),
+                            contentPadding: EdgeInsets.symmetric(vertical: 2, horizontal: 8),
                             filled: true,
-                            fillColor: Color(whitness),
-                            enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.all(Radius.circular(12.0)),
-                              borderSide: BorderSide(
-                                  color: Colors.white,
-                                  width: 2),
+                            fillColor: Colors.white,
+
+                            border: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.orange, width: 1.0),
+                              borderRadius: BorderRadius.circular(4),
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                              borderSide: BorderSide(
-                                  color: Colors.white,
-                                  width: 2),
+                              borderSide: BorderSide(color: Colors.orange, width: 2.0),
+                              borderRadius: BorderRadius.circular(4),
                             ),
+                            hintText: "Username",
                           ),
                         ),
                     )
@@ -133,23 +129,19 @@ class _SignUpState extends State<SignUp> {
                       },
                       autocorrect: true,
                       decoration: InputDecoration(
-                        hintText: 'email id',
-                        prefixIcon: Icon(Icons.person_outline,color: Color(primareyColor),),
-                        hintStyle: TextStyle(color: Colors.grey),
+                        contentPadding: EdgeInsets.symmetric(vertical: 2, horizontal: 8),
                         filled: true,
-                        fillColor: Color(whitness),
-                        enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(12.0)),
-                          borderSide: BorderSide(
-                              color: Colors.white,
-                              width: 2),
+                        fillColor: Colors.white,
+
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.orange, width: 1.0),
+                          borderRadius: BorderRadius.circular(4),
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                          borderSide: BorderSide(
-                              color: Colors.white,
-                              width: 2),
+                          borderSide: BorderSide(color: Colors.orange, width: 2.0),
+                          borderRadius: BorderRadius.circular(4),
                         ),
+                        hintText: "Email",
                       ),
                     ),
                   )
@@ -169,23 +161,19 @@ class _SignUpState extends State<SignUp> {
                       },
                       autocorrect: true,
                       decoration: InputDecoration(
-                        hintText: 'New Password',
-                        prefixIcon: Icon(Icons.lock,color: Color(primareyColor),),
-                        hintStyle: TextStyle(color: Colors.grey),
+                        contentPadding: EdgeInsets.symmetric(vertical: 2, horizontal: 8),
                         filled: true,
-                        fillColor: Color(whitness),
-                        enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(12.0)),
-                          borderSide: BorderSide(
-                              color: Colors.white,
-                              width: 2),
+                        fillColor: Colors.white,
+
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.orange, width: 1.0),
+                          borderRadius: BorderRadius.circular(4),
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                          borderSide: BorderSide(
-                              color: Colors.white,
-                              width: 2),
+                          borderSide: BorderSide(color: Colors.orange, width: 2.0),
+                          borderRadius: BorderRadius.circular(4),
                         ),
+                        hintText: "Password",
                       ),
                     ),
                   )
@@ -205,23 +193,19 @@ class _SignUpState extends State<SignUp> {
                       obscureText: true,
                       autocorrect: true,
                       decoration: InputDecoration(
-                        hintText: 'Confirm Password',
-                        prefixIcon: Icon(Icons.lock_outline,color: Color(primareyColor),),
-                        hintStyle: TextStyle(color: Colors.grey),
+                        contentPadding: EdgeInsets.symmetric(vertical: 2, horizontal: 8),
                         filled: true,
-                        fillColor: Color(whitness),
-                        enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(12.0)),
-                          borderSide: BorderSide(
-                              color: Colors.white,
-                              width: 2),
+                        fillColor: Colors.white,
+
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.orange, width: 1.0),
+                          borderRadius: BorderRadius.circular(4),
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                          borderSide: BorderSide(
-                              color: Colors.white,
-                              width: 2),
+                          borderSide: BorderSide(color: Colors.orange, width: 2.0),
+                          borderRadius: BorderRadius.circular(4),
                         ),
+                        hintText: "Confirm Password",
                       ),
                     ),
                   )
@@ -241,23 +225,19 @@ class _SignUpState extends State<SignUp> {
                       },
                       autocorrect: true,
                       decoration: InputDecoration(
-                        hintText: 'Phone Number',
-                        prefixIcon: Icon(Icons.phone,color: Color(primareyColor),),
-                        hintStyle: TextStyle(color: Colors.grey),
+                        contentPadding: EdgeInsets.symmetric(vertical: 2, horizontal: 8),
                         filled: true,
-                        fillColor: Color(whitness),
-                        enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(12.0)),
-                          borderSide: BorderSide(
-                              color: Colors.white,
-                              width: 2),
+                        fillColor: Colors.white,
+
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.orange, width: 1.0),
+                          borderRadius: BorderRadius.circular(4),
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                          borderSide: BorderSide(
-                              color: Colors.white,
-                              width: 2),
+                          borderSide: BorderSide(color: Colors.orange, width: 2.0),
+                          borderRadius: BorderRadius.circular(4),
                         ),
+                        hintText: "Phone number",
                       ),
                     ),
                   )
@@ -272,22 +252,19 @@ class _SignUpState extends State<SignUp> {
                         child: TextField(
                           autocorrect: true,
                           decoration: InputDecoration(
-                            hintText: 'Age',
-                            hintStyle: TextStyle(color: Colors.grey),
+                            contentPadding: EdgeInsets.symmetric(vertical: 2, horizontal: 8),
                             filled: true,
-                            fillColor: Color(whitness),
-                            enabledBorder: OutlineInputBorder(
-                              borderRadius:
-                              BorderRadius.all(Radius.circular(12.0)),
-                              borderSide:
-                              BorderSide(color: Colors.white, width: 2),
+                            fillColor: Colors.white,
+
+                            border: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.orange, width: 1.0),
+                              borderRadius: BorderRadius.circular(4),
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderRadius:
-                              BorderRadius.all(Radius.circular(10.0)),
-                              borderSide: BorderSide(
-                                  color: Color(primareyColor), width: 2),
+                              borderSide: BorderSide(color: Colors.orange, width: 2.0),
+                              borderRadius: BorderRadius.circular(4),
                             ),
+                            hintText: "Age",
                           ),
                         ),
                       ),
@@ -301,22 +278,19 @@ class _SignUpState extends State<SignUp> {
                         child: TextField(
                           autocorrect: true,
                           decoration: InputDecoration(
-                            hintText: 'height',
-                            hintStyle: TextStyle(color: Colors.grey),
+                            contentPadding: EdgeInsets.symmetric(vertical: 2, horizontal: 8),
                             filled: true,
-                            fillColor: Color(whitness),
-                            enabledBorder: OutlineInputBorder(
-                              borderRadius:
-                              BorderRadius.all(Radius.circular(12.0)),
-                              borderSide:
-                              BorderSide(color: Colors.white, width: 2),
+                            fillColor: Colors.white,
+
+                            border: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.orange, width: 1.0),
+                              borderRadius: BorderRadius.circular(4),
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderRadius:
-                              BorderRadius.all(Radius.circular(10.0)),
-                              borderSide: BorderSide(
-                                  color: Color(primareyColor), width: 2),
+                              borderSide: BorderSide(color: Colors.orange, width: 2.0),
+                              borderRadius: BorderRadius.circular(4),
                             ),
+                            hintText: "Height",
                           ),
                         ),
                       ),
@@ -330,22 +304,19 @@ class _SignUpState extends State<SignUp> {
                         child: TextField(
                           autocorrect: true,
                           decoration: InputDecoration(
-                            hintText: 'Weight',
-                            hintStyle: TextStyle(color: Colors.grey),
+                            contentPadding: EdgeInsets.symmetric(vertical: 2, horizontal: 8),
                             filled: true,
-                            fillColor: Color(whitness),
-                            enabledBorder: OutlineInputBorder(
-                              borderRadius:
-                              BorderRadius.all(Radius.circular(10.0)),
-                              borderSide:
-                              BorderSide(color: Colors.white, width: 0),
+                            fillColor: Colors.white,
+
+                            border: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.orange, width: 1.0),
+                              borderRadius: BorderRadius.circular(4),
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderRadius:
-                              BorderRadius.all(Radius.circular(10.0)),
-                              borderSide: BorderSide(
-                                  color: Color(primareyColor), width: 0),
+                              borderSide: BorderSide(color: Colors.orange, width: 2.0),
+                              borderRadius: BorderRadius.circular(4),
                             ),
+                            hintText: "Weight",
                           ),
                         ),
                       ),

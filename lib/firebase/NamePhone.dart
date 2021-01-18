@@ -8,6 +8,7 @@ import 'package:gymbodybuilding/firebase/DatabaseManager.dart';
 import 'package:gymbodybuilding/firebase/auth.dart';
 import 'package:gymbodybuilding/models/constants.dart';
 import 'package:gymbodybuilding/screens/already_created_room.dart';
+import 'package:gymbodybuilding/screens/buttom_navigation/main_bottom_navigation.dart';
 import 'package:gymbodybuilding/screens/create_room.dart';
 
 
@@ -245,7 +246,7 @@ class _NamePhoneState extends State<NamePhone> {
                   onPressed: () async {
                     if (_formkey.currentState.validate()) {
                       submitAction(context);
-                      Navigator.push((context), MaterialPageRoute(builder: (context) => CreateRoom()));
+                      Navigator.push((context), MaterialPageRoute(builder: (context) => Home()));
                     }
                   },
                   shape: RoundedRectangleBorder(

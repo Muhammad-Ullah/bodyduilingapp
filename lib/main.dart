@@ -1,12 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:gymbodybuilding/authentication/login.dart';
-import 'package:gymbodybuilding/firebase/auth.dart';
-import 'package:gymbodybuilding/screens/already_created_room.dart';
-import 'package:gymbodybuilding/screens/room_system.dart';
+import 'package:gymbodybuilding/screens/buttom_navigation/main_bottom_navigation.dart';
+
 import 'package:gymbodybuilding/screens/splashscreen.dart';
-import 'package:gymbodybuilding/screens/user_profile.dart';
 import 'package:gymbodybuilding/ui/screens/home.dart';
 
 void main() async{
@@ -33,7 +30,7 @@ class MyApp extends StatelessWidget {
           User user = snapshot.data;
           if(user==null)
             return SplashScreen();
-          return HomeScreen();
+          return Home();
         }
         else
           {
